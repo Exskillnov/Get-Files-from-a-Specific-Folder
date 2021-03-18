@@ -19,7 +19,7 @@ pathToPaste = paths[1].strip()
 filesList = listFiles(pathToCopy)
 
 for data in filesList:
-    shutil.copy2(pathToCopy + '\\' + data, pathToPaste)
+    shutil.copy2(os.path.join(pathToCopy, data), pathToPaste)
 
 text.close()
 
